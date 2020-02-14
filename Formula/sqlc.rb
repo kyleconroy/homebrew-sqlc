@@ -7,6 +7,12 @@ class Sqlc < Formula
 
   depends_on "go" => :build
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-sqlc"
+    cellar :any_skip_relocation
+    sha256 "57f8ce52e3872630ae62c2a065afd900b211c5a35cd8a2fcc9c13a5b0d2d8bf0" => :mojave
+  end
+
   def install
     ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
     (buildpath/"src/github.com/kyleconroy/sqlc").install buildpath.children
