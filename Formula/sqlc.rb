@@ -12,7 +12,7 @@ class Sqlc < Formula
     (buildpath/"src/github.com/kyleconroy/sqlc").install buildpath.children
 
     cd "src/github.com/kyleconroy/sqlc" do
-      system "go", "build", "-ldflags", '"-X github.com/kyleconroy/sqlc/internal/cmd.version=v1.0.0"', "-o", bin/"sqlc", "./cmd/sqlc"
+      system "go", "build", "-o", bin/"sqlc", "-ldflags", '"-X github.com/kyleconroy/sqlc/internal/cmd.version=v1.0.0"', "./cmd/sqlc"
     end
   end
 end
