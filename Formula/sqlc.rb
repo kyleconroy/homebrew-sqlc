@@ -8,11 +8,6 @@ class Sqlc < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
-    (buildpath/"src/github.com/kyleconroy/sqlc").install buildpath.children
-
-    cd "src/github.com/kyleconroy/sqlc" do
-      system "go", "build", "-o", bin/"sqlc", "./cmd/sqlc"
-    end
+    system "go", "build", "-trimpath", "-o", bin/"sqlc", "./cmd/sqlc"
   end
 end
