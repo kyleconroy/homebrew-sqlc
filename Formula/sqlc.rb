@@ -1,8 +1,8 @@
 class Sqlc < Formula
   desc "Generate type safe Go from SQL"
   homepage "https://sqlc.dev/"
-  url "https://github.com/kyleconroy/sqlc/archive/v1.5.0.tar.gz"
-  sha256 "9000a71974c0327e6fda5f46421bb6d58b102164046d271c6f174dd5f437e99e"
+  url "https://github.com/kyleconroy/sqlc/archive/v1.6.0.tar.gz"
+  sha256 "a95a123f29a71f5a2eea0811e4590d59cbc92eccd407abe93c110c738fc4740b"
   head "https://github.com/kyleconroy/sqlc.git"
 
   depends_on "go" => :build
